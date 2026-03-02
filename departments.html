@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Departments | Smart University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<header class="header">
+    <div class="container nav">
+        <h2 class="logo">Smart<span>University</span></h2>
+        <div id="hamburger" class="hamburger">☰</div>
+
+        <nav id="navMenu" class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="departments.html" class="active">Departments</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-portal.html">Student Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="hero" style="height:60vh;">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Our Departments</h1>
+            <p>Explore Academic Programs & Disciplines</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= DEPARTMENTS SECTION ================= -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Academic Departments</h2>
+
+        <!-- Filter Buttons -->
+        <!-- <div class="filter-bar">
+            <button class="active" onclick="filterDept('all', this)">All</button>
+            <button onclick="filterDept('cs', this)">Computer Science</button>
+            <button onclick="filterDept('business', this)">Business</button>
+            <button onclick="filterDept('engineering', this)">Engineering</button>
+        </div> -->
+        <div class="filter-bar">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="cs">Computer</button>
+            <button data-filter="business">Business</button>
+            <button data-filter="engineering">Engineering</button>
+            <button data-filter="medical">Medical</button>
+            <button data-filter="social">Social</button>
+            <button data-filter="arts">Arts</button>
+            <button data-filter="science">Science</button>
+        </div>
+
+        <!-- Departments Grid -->
+        <div class="dept-grid">
+
+            <!-- Computer Science -->
+            <div class="dept-card cs">
+                <h3>BS Computer Science</h3>
+                <p>
+                    Focuses on programming, data structures, web development,
+                    artificial intelligence, and software engineering.
+                </p>
+            </div>
+
+            <div class="dept-card cs">
+                <h3>BS Information Technology</h3>
+                <p>
+                    Covers networking, databases, system administration,
+                    and modern IT infrastructure.
+                </p>
+            </div>
+
+            <div class="dept-card cs">
+                <h3>BS Software Engineering</h3>
+                <p>
+                    Focuses on software development, system design,
+                    project management, and modern programming technologies.
+                </p>
+            </div>
+
+            <!-- Business -->
+            <div class="dept-card business">
+                <h3>BBA (Business Administration)</h3>
+                <p>
+                    Develops leadership, management, finance, and marketing
+                    skills for corporate success.
+                </p>
+            </div>
+
+            <div class="dept-card business">
+                <h3>MBA</h3>
+                <p>
+                    Advanced business studies focusing on strategic management,
+                    entrepreneurship, and decision-making.
+                </p>
+            </div>
+
+            <div class="dept-card business">
+                <h3>BS Accounting & Finance</h3>
+                <p>
+                    Covers financial management, auditing,
+                    taxation, and corporate accounting systems.
+                </p>
+            </div>
+
+            <!-- Engineering -->
+            <div class="dept-card engineering">
+                <h3>Electrical Engineering</h3>
+                <p>
+                    Covers power systems, electronics, communication,
+                    and industrial automation.
+                </p>
+            </div>
+
+            <div class="dept-card engineering">
+                <h3>Civil Engineering</h3>
+                <p>
+                    Focuses on construction, structural design,
+                    transportation, and environmental engineering.
+                </p>
+            </div>
+
+            <div class="dept-card engineering">
+                <h3>Mechanical Engineering</h3>
+                <p>
+                    Focuses on machine design, thermodynamics,
+                    manufacturing processes, and robotics.
+                </p>
+            </div>
+
+            <!-- Medical & Health -->
+            <div class="dept-card medical">
+                <h3>Doctor of Pharmacy (Pharm-D)</h3>
+                <p>
+                    Focuses on pharmaceutical sciences, clinical pharmacy,
+                    drug development, and patient care.
+                </p>
+            </div>
+
+            <div class="dept-card medical">
+                <h3>BS Nursing</h3>
+                <p>
+                    Prepares students for healthcare services, patient management,
+                    and modern nursing practices.
+                </p>
+            </div>
+
+            <div class="dept-card medical">
+                <h3>Doctor of Physical Therapy (DPT)</h3>
+                <p>
+                    Prepares students for rehabilitation sciences,
+                    physical therapy techniques, and patient recovery care.
+                </p>
+            </div>
+
+            <!-- Social Sciences -->
+            <div class="dept-card social">
+                <h3>BS Psychology</h3>
+                <p>
+                    Studies human behavior, mental health, counseling,
+                    and psychological research methods.
+                </p>
+            </div>
+
+            <div class="dept-card social">
+                <h3>BS Sociology</h3>
+                <p>
+                    Focuses on social behavior, cultural studies,
+                    community development, and research.
+                </p>
+            </div>
+
+            <!-- Arts & Media -->
+            <div class="dept-card arts">
+                <h3>BS Media & Communication</h3>
+                <p>
+                    Covers journalism, digital media, broadcasting,
+                    and public communication strategies.
+                </p>
+            </div>
+
+            <div class="dept-card arts">
+                <h3>Fine Arts</h3>
+                <p>
+                    Develops creative skills in painting, design,
+                    visual arts, and artistic expression.
+                </p>
+            </div>
+
+            <div class="dept-card arts">
+                <h3>Graphic Design</h3>
+                <p>
+                    Develops creative skills in digital design,
+                    branding, visual communication, and multimedia arts.
+                </p>
+            </div>
+
+            <!-- Mathematics & Science -->
+            <div class="dept-card science">
+                <h3>BS Mathematics</h3>
+                <p>
+                    Focuses on advanced mathematics, statistics,
+                    and analytical problem solving.
+                </p>
+            </div>
+
+            <div class="dept-card science">
+                <h3>BS Physics</h3>
+                <p>
+                    Covers theoretical and applied physics,
+                    research, and modern scientific technologies.
+                </p>
+            </div>
+
+            <div class="dept-card science">
+                <h3>BS Chemistry</h3>
+                <p>
+                    Covers organic, inorganic, and analytical chemistry,
+                    laboratory research, and industrial applications.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>Smart University</h2>
+            <p>Shaping future leaders through quality education.</p>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <p>Email: info@smartuniversity.edu</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Smart University. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- ================= PAGE JS (FILTER LOGIC) ================= -->
+
+<script>
+const filterButtons = document.querySelectorAll(".filter-bar button");
+const cards = document.querySelectorAll(".dept-card");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+
+        document.querySelector(".filter-bar .active")
+        .classList.remove("active");
+
+        button.classList.add("active");
+
+        const filter = button.getAttribute("data-filter");
+
+        cards.forEach(card => {
+            if (filter === "all" || card.classList.contains(filter)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admissions | Smart University</title>
+    <meta name="description" content="Apply online for admissions at Smart University.">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header">
+    <div class="container nav">
+
+        <h2 class="logo">Smart<span>University</span></h2>
+        <div id="hamburger" class="hamburger">☰</div>
+
+        <nav id="navMenu" class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="admissions.html" class="active">Admissions</a></li>
+                <li><a href="student-portal.html">Student Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+</header>
+
+
+<main>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="hero small-hero" style="height: 60vh;">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Admissions</h1>
+            <p>Apply Online for Academic Programs</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- ================= ADMISSION FORM ================= -->
+<section class="features">
+
+    <div class="container">
+
+        <h2 class="section-title">Admission Application Form</h2>
+
+        <div class="form-container">
+
+            <form id="admissionForm" onsubmit="return validateAdmissionForm()">
+
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="program">Select Program *</label>
+                    <select id="program" name="program" required>
+                        <option value="">-- Select Program --</option>
+                        <option>BS Computer Science</option>
+                        <option>BS Information Technology</option>
+                        <option>BBA</option>
+                        <option>MBA</option>
+                        <option>Electrical Engineering</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="qualification">Previous Qualification</label>
+                    <input type="text" id="qualification" name="qualification" placeholder="Intermediate / Bachelor">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="Any additional information"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn">Submit Application</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+            <h2>Smart University</h2>
+            <p>Shaping future leaders through quality education.</p>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="faculty.html">Faculty</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <p>Email: info@smartuniversity.edu</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> Smart University. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+
+<!-- ================= MAIN JS ================= -->
+<script src="js/script.js"></script>
+
+<script>
+    // Auto footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Form validation function
+    function validateAdmissionForm() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const program = document.getElementById("program").value;
+
+        if (name === "" || email === "" || program === "") {
+            alert("Please fill in all required fields.");
+            return false; // Prevent form submission
+        }
+        return true; // Allow form submission
+    }
+</script>
+
+</body>
+</html>

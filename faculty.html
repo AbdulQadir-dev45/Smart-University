@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faculty | Smart University</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= HEADER / NAVBAR ================= -->
+<header class="header">
+    <div class="container nav">
+        <h2 class="logo">Smart<span>University</span></h2>
+        <div id="hamburger" class="hamburger">☰</div>
+
+        <nav id="navMenu" class="nav-menu">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="faculty.html" class="active">Faculty</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="student-portal.html">Student Portal</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="hero" style="height:60vh;">
+    <div class="hero-overlay">
+        <div class="hero-content">
+            <h1>Our Faculty</h1>
+            <p>Meet Our Experienced & Qualified Teachers</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= FACULTY SECTION ================= -->
+<section class="features">
+  <div class="container">
+    <h2 class="section-title">Faculty Members</h2>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="active" data-filter="all">All</button>
+      <button data-filter="cs">Computer</button>
+      <button data-filter="business">Business</button>
+      <button data-filter="engineering">Engineering</button>
+      <button data-filter="medical">Medical</button>
+      <button data-filter="social">Social</button>
+      <button data-filter="arts">Arts</button>
+      <button data-filter="science">Science</button>
+    </div>
+
+    <!-- Faculty Grid -->
+    <div class="faculty-flex">
+
+      <!-- Computer Science -->
+      <div class="faculty-card" data-department="cs">
+        <img src="images/teacher1.jpg" alt="Dr. Ahmed Khan, Professor of Computer Science">
+        <h3>Dr. Ahmed Khan</h3>
+        <p>Professor of Computer Science</p>
+        <button onclick="openModal('Dr. Ahmed Khan','PhD Computer Science with 15+ years of teaching and research experience in AI and Web Technologies.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Business -->
+      <div class="faculty-card" data-department="business">
+        <img src="images/teacher2.jpg" alt="Ms. Sara Ali, Assistant Professor of Business">
+        <h3>Ms. Sara Ali</h3>
+        <p>Assistant Professor (Business)</p>
+        <button onclick="openModal('Ms. Sara Ali','MBA with specialization in Marketing and 10+ years of corporate and academic experience.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Engineering -->
+      <div class="faculty-card" data-department="engineering">
+        <img src="images/teacher3.jpg" alt="Engr. Usman Raza, Lecturer in Engineering">
+        <h3>Engr. Usman Raza</h3>
+        <p>Lecturer (Engineering)</p>
+        <button onclick="openModal('Engr. Usman Raza','MS Electrical Engineering, expert in power systems and industrial automation.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Medical -->
+      <div class="faculty-card" data-department="medical">
+        <img src="images/teacher4.webp" alt="Dr. Sana Iqbal, Lecturer in Medical">
+        <h3>Dr. Sana Iqbal</h3>
+        <p>Lecturer (Medical)</p>
+        <button onclick="openModal('Dr. Sana Iqbal','PhD in Pharmacy, expert in clinical pharmacy and patient care.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Social Sciences -->
+      <div class="faculty-card" data-department="social">
+        <img src="images/teacher5.jpeg" alt="Dr. Hammad Ali, Professor of Psychology">
+        <h3>Dr. Hammad Ali</h3>
+        <p>Professor of Psychology</p>
+        <button onclick="openModal('Dr. Hammad Ali','PhD in Psychology, specialized in counseling and research.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Arts -->
+      <div class="faculty-card" data-department="arts">
+        <img src="images/teacher6.jpg" alt="Ms. Ayesha Khan, Lecturer in Media & Communication">
+        <h3>Ms. Ayesha Khan</h3>
+        <p>Lecturer, Media & Communication</p>
+        <button onclick="openModal('Ms. Ayesha Khan','Expert in journalism, digital media and broadcasting.')">
+          View Profile
+        </button>
+      </div>
+
+      <!-- Science -->
+      <div class="faculty-card" data-department="science">
+        <img src="images/teacher7.jpg" alt="Dr. Imran Sheikh, Professor of Physics">
+        <h3>Dr. Imran Sheikh</h3>
+        <p>Professor of Physics</p>
+        <button onclick="openModal('Dr. Imran Sheikh','PhD in Physics, expert in research and applied sciences.')">
+          View Profile
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="facultyModal" tabindex="-1">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3 id="modalName"></h3>
+        <p id="modalDetails"></p>
+    </div>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <div class="container footer-grid">
+        <div>
+            <h2>Smart University</h2>
+            <p>Shaping future leaders through quality education.</p>
+        </div>
+
+        <div>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="departments.html">Departments</a></li>
+                <li><a href="admissions.html">Admissions</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Contact</h2>
+            <p>Email: info@smartuniversity.edu</p>
+            <p>Phone: +92 300 1234567</p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 Smart University. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- ================= PAGE JS ================= -->
+<script>
+    const modal = document.getElementById("facultyModal");
+    const modalName = document.getElementById("modalName");
+    const modalDetails = document.getElementById("modalDetails");
+
+    // Filter Buttons
+    const filterButtons = document.querySelectorAll('.features .filter-bar button');
+    // Faculty Cards
+    const facultyCards = document.querySelectorAll('.faculty-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Active button highlight
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            const filter = button.getAttribute('data-filter');
+
+            facultyCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-department') === filter) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    function openModal(name, details){
+        modalName.innerText = name;
+        modalDetails.innerText = details;
+        modal.style.display = "flex";
+        modal.focus(); // Set focus to modal for accessibility
+    }
+
+    function closeModal(){
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(e){
+        if(e.target === modal){
+            closeModal();
+        }
+    }
+
+    // Close modal with Escape key
+    window.addEventListener('keydown', function(event) {
+        if (event.key === "Escape") {
+            closeModal();
+        }
+    });
+</script>
+
+</body>
+</html>
