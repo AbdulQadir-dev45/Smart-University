@@ -4,17 +4,11 @@
    Purpose: Final Term Project
 ===================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
-  const hamburger = document.getElementById("hamburger");
-  const navMenu = document.getElementById("navMenu");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
 
-  if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-      navMenu.classList.toggle("active");
-    });
-  } else {
-    console.warn("Hamburger or navMenu element not found");
-  }
+hamburger.addEventListener("click", () => {
+    navMenu.classList.toggle("active");
 });
 
 /* =====================================
